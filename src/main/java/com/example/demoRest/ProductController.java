@@ -36,6 +36,22 @@ public class ProductController
         return ResponseEntity.ok().body(p);
     }
 
+    //Find gemfil med navn og returner til client(er)
+    @GetMapping("/loadGame/{name}")
+    public ResponseEntity<String> getProductById(@PathVariable String name) {
+        //Hent savegame fra lokal folder
+        String gameboardString = "editthis";
+        return ResponseEntity.ok().body(gameboardString);
+    }
+
+
+    //Gem boardJSON loakt i mappe med given name
+    @PostMapping("/saveGame/{name}")
+    public ResponseEntity<Product> getBoardById(@RequestBody String boardJson, @PathVariable String name) {
+        Product p = productService.getProductById(id);
+        return ResponseEntity.ok().body(p);
+    }
+
     @GetMapping("/api/users")
     public ResponseEntity<String> kapa()
     {

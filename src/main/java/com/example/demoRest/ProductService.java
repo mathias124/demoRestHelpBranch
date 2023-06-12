@@ -13,7 +13,7 @@ public class ProductService implements IProductService
 
     public ProductService() {
     //adding products to the List
-        products.add(new Product(100, "Mobile", 9000.00));
+        products.add(new Product(100, "MobileGG", 8000.00));
         products.add(new Product(101, "Smart TV",  60000.00));
         products.add(new Product(102, "Washing Machine", 9000.00));
         products.add(new Product(103, "Laptop", 24000.00));
